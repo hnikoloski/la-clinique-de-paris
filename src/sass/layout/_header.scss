@@ -1,0 +1,51 @@
+#masthead {
+  background: $dgreen;
+  padding: 28.204rem;
+  .logo-wrapper {
+    width: 509.5527rem;
+    height: 184.2663rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 37.6054rem;
+  }
+  #site-navigation {
+    ul {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        &:not(:last-of-type) {
+          margin-right: 112.8161rem;
+        }
+        a {
+          color: #fff;
+          font-size: 39.4856rem;
+          font-weight: $medium;
+          display: block;
+          position: relative;
+          &::after {
+            content: "";
+            background: $kaki;
+            bottom: -15.0421rem;
+            height: 13.1619rem;
+            left: 0;
+            position: absolute;
+            @include transform(scaleX(0));
+            transform-origin: center;
+            transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+            -moz-transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+            -webkit-transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+            width: 100%;
+          }
+          &:hover {
+            &::after {
+              @include transform(scaleX(1));
+            }
+          }
+        }
+      }
+    }
+  }
+}

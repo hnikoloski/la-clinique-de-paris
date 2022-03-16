@@ -1,0 +1,11 @@
+.btn {
+  border: 1.8803rem solid $dgreen;
+  padding: 28.204rem 75.2107rem;
+  font-size: 35.7251rem;
+  font-weight: $semiBold;
+  color: $dgreen;
+  &:hover {
+    background: $dgreen;
+    color: #fff;
+  }
+}

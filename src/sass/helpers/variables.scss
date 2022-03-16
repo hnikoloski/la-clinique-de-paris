@@ -3,14 +3,11 @@ $regular: 400;
 $medium: 500;
 $semiBold: 600;
 $bold: 700;
-$roboto: "Roboto", "Arial";
+$montserrat: "Montserrat", sans-serif;
 
 // Colors
-$blue: #0c51a0;
-$dblue: #0f2765;
-$darkerBlue: #212e5a;
-$lblue: #37a5ff;
-$yellow: #ffd200;
+$dgreen: #354e57;
+$kaki: #676d43;
 :root {
   --side-padding: 351.610168rem;
   @media (max-width: 768px) {

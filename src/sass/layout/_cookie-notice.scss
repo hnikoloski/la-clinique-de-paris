@@ -19,7 +19,7 @@
       font-size: 160rem;
     }
     a {
-      color: $lblue;
+      color: $kaki;
     }
   }
   .buttons-wrapper {
@@ -37,7 +37,7 @@
         text-decoration: underline;
       }
       &.accept {
-        color: $lblue;
+        color: $kaki;
         margin-right: 26.323756rem;
         @include for-phone {
           margin-right: 180rem;

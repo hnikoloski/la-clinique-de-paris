@@ -1,5 +1,4 @@
 require("waypoints/lib/jquery.waypoints.js");
-
 jQuery(document).ready(function ($) {
   function addClassDelay(v, className, delay) {
     $(v).removeClass(className);
