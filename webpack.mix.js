@@ -9,4 +9,5 @@ mix
     .js('src/app.js', 'js')
     .sass('src/app.scss', 'css')
     // .copyDirectory('src/sass/fonts/roboto', 'dist/css/fonts')
-    .setPublicPath('dist');
+    .setPublicPath('dist')
+    .sourceMaps(true, "source-map")

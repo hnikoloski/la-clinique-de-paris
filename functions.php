@@ -184,3 +184,12 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+// Disable Plugin update notification
+function filter_plugin_updates($value)
+{
+    unset($value->response['advanced-custom-fields-pro/acf.php']);
+    return $value;
+}
+add_filter('site_transient_update_plugins', 'filter_plugin_updates');

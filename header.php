@@ -24,26 +24,28 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-scroll-container>
     <?php wp_body_open();
     $custom_logo_id = get_theme_mod('custom_logo');
     $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
+    require('template-parts/preloader.php');
     ?>
     <div id="page" class="site">
         <header id="masthead" class="site-header">
-            <a href="<?= home_url(); ?>" class="logo-wrapper d-block">
-                <img src="<?= $logoUrl[0]; ?>" alt="<?= get_bloginfo(); ?>">
-            </a>
-
-            <nav id="site-navigation" class="main-navigation">
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'menu-1',
-                        'menu_id'        => 'primary-menu',
-                        'container'      => false,
-                    )
-                );
-                ?>
-            </nav><!-- #site-navigation -->
+            <div class="container">
+                <a href="<?= home_url(); ?>" class="logo-wrapper d-block">
+                    <img src="<?= $logoUrl[0]; ?>" alt="<?= get_bloginfo(); ?>">
+                </a>
+                <nav id="site-navigation-left" class="main-navigation">
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'menu-1',
+                            'menu_id'        => 'primary-menu',
+                            'container'      => false,
+                        )
+                    );
+                    ?>
+                </nav><!-- #site-navigation -->
+            </div>
         </header><!-- #masthead -->

@@ -1,11 +1,12 @@
 var $ = require("jquery");
-$(document).ready(function () {
+import 'jquery.ripples';
+$(function () {
 
     $('#hero-home').ripples({
         resolution: 512,
-        dropRadius: 50, //px
+        dropRadius: 80, //px
         perturbance: 0.015,
-        strength: 0.01,
+        strength: 0.05,
     })
     // setTimeout(function () {
     //     $('#hero-home').ripples('destroy');

@@ -1,0 +1,13 @@
+.home-drops {
+  position: fixed;
+  z-index: -2;
+  left: 0;
+  top: 0;
+  width: 120vw;
+  height: 60vw;
+  background-image: url("../../assets/imgs/drops-bg.png");
+  background-position: center;
+  background-size: auto 50%;
+  opacity: 0;
+  transform: translateY(25%);
+}

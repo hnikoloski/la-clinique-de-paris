@@ -25,7 +25,9 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
+    "gsap": "^3.10.2",
     "jquery.ripples": "^0.6.3",
-    "waypoints": "^4.0.1"
+    "scrollreveal": "^4.0.9",
+    "splitting": "^1.0.6"
   }
 }

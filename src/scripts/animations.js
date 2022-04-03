@@ -1,90 +1,99 @@
-require("waypoints/lib/jquery.waypoints.js");
+import ScrollReveal from "scrollreveal";
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
+import Splitting from "splitting";
+import { gsap, ScrollTrigger, ExpoScaleEase, Expo } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger, ExpoScaleEase, Expo);
+Splitting();
 jQuery(document).ready(function ($) {
-  function addClassDelay(v, className, delay) {
-    $(v).removeClass(className);
-    $(v).css("opacity", "0");
-    setTimeout(function () {
-      $(v).waypoint(
-        function () {
-          setTimeout(function () {
-            $(v).css("opacity", "1");
-            $(v).addClass(className);
-          }, delay);
-        },
-        { offset: "100%" }
-      );
-    }, delay);
-  }
-  function setAnimateWithWaypoints() {
-    $(".fadeInUp").each(function (k, v) {
-      let delay = $(this).attr("data-delay");
-      addClassDelay(v, "fadeInUp", delay);
-    });
-
-    $(".add-active").each(function (k, v) {
-      let delay = $(this).attr("data-delay");
-      addClassDelay(v, "active", delay);
-    });
-
-    $(".fadeInDown").each(function (k, v) {
-      let delay = $(this).attr("data-delay");
-      addClassDelay(v, "fadeInDown", delay);
-    });
-
-    $(".fadeIn").each(function (k, v) {
-      let delay = $(this).attr("data-delay");
-      addClassDelay(v, "fadeIn", delay);
-    });
-
-    $(".fadeInLeft").each(function (k, v) {
-      let delay = $(this).attr("data-delay");
-      addClassDelay(v, "fadeInLeft", delay);
-    });
-
-    $(".fadeInRight").each(function (k, v) {
-      let delay = $(this).attr("data-delay");
-      addClassDelay(v, "fadeInRight", delay);
-    });
-  }
   if ($("body").hasClass("home")) {
     setTimeout(function () {
-      $("#preloader").fadeOut(600);
       $("body").removeClass("overflow-hidden");
-
-      setAnimateWithWaypoints();
-    }, 200);
+      $('#preloader').fadeOut(700);
+    }, 400);
   } else {
     setTimeout(function () {
-      $("#preloader").fadeOut(600);
       $("body").removeClass("overflow-hidden");
-
-      setAnimateWithWaypoints();
-    }, 300);
+      $('#preloader').fadeOut(300);
+    }, 200);
   }
-  $(".text-animation").each(function (k, v) {
-    let elem = $(this);
-    let characters = elem
-      .html()
-      .replaceAll("<br>", "|")
-      .replaceAll("<br />", "|")
-      .trim()
-      .split("");
-    // console.log(elem.html());
-    // console.log(characters);
-    elem.empty();
+  var staggerUp = {
+    duration: 600,
+    interval: 100,
+    distance: '50px',
+    viewFactor: 0.75,
+    easing: 'ease',
+    delay: 200,
+  };
+  ScrollReveal().reveal('.richtext-fade-in > *', staggerUp);
+  ScrollReveal().reveal('.fade-in-item', staggerUp);
+  ScrollReveal().reveal('.home-services-listings-item', staggerUp);
+  ScrollReveal().reveal('.link-listings-item-fadein', staggerUp);
+  // Text animation
+  $(".animate-text").each(function () {
+    var text = $(this);
+    var characters = text.find(".char");
 
-    $.each(characters, function (i, el) {
-      let delay = i * 0.04;
-      if (el === " ") {
-        el = "&nbsp;";
-      }
-      if (el === "|") {
-        elem.append("<br />");
-      } else {
-        elem.append(
-          "<span style='transition-delay: " + delay + "s'>" + el + "</span>"
-        );
-      }
+    const textTimeline = gsap.timeline({
+
+      scrollTrigger: {
+        trigger: text,
+        start: "top 75%",
+        // markers: true,
+      },
     });
+
+    textTimeline.to(characters, { duration: 1.2, stagger: 0.01, ease: Expo.easeOut, transform: 'translateY(0)' });
+  });
+
+  // Body text animation
+  $(".animate-text-body").each(function () {
+    var text = $(this);
+    var characters = text.find(".char");
+
+    const textTimeline = gsap.timeline({
+
+      scrollTrigger: {
+        trigger: text,
+        start: "top 50%",
+        // markers: true,
+      },
+    });
+
+    textTimeline.to(characters, { duration: 1.2, stagger: 0.005, ease: Expo.easeOut, transform: 'translateY(0)' });
+  });
+  $(".animate-ltr").each(function () {
+    var text = $(this);
+    var characters = text;
+
+    const textTimeline = gsap.timeline({
+
+      scrollTrigger: {
+        trigger: text,
+        start: "top 50%",
+        // markers: true,
+      },
+    });
+
+    textTimeline.to(characters, { duration: 2.2, stagger: 0.005, ease: Expo.easeOut, transform: 'translateX(0)' });
+  });
+
+  $(".home-drops").each(function () {
+    var container = $(".home-intro");
+    var target = $(this);
+
+    const tl = gsap.timeline({
+
+      scrollTrigger: {
+        trigger: container,
+        start: "top 50%",
+        end: "bottom top",
+        scrub: true,
+        // markers: true,
+      },
+    });
+
+    tl.to(target, { opacity: 1, xPercent: -5, yPercent: -25, ease: 'none', duration: 0.5 })
+      .to(target, { opacity: 0, xPercent: -10, yPercent: -50, ease: 'none', duration: 0.5 }, 0.5);
   });
 });

@@ -1,50 +1,80 @@
 #masthead {
-  background: $dgreen;
-  padding: 28.204rem;
-  .logo-wrapper {
-    width: 509.5527rem;
-    height: 184.2663rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 37.6054rem;
+  position: fixed;
+  z-index: 1024;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: content-box;
+  border-top: 7.5211rem solid #e8842d;
+  .container {
+    height: 300.8429rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    transition: height 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding-left: 235.0335rem;
+    padding-right: 235.0335rem;
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      top: -1px;
+      width: 100%;
+      height: 100%;
+      background: #1b355d;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    .logo-wrapper {
+      display: block;
+      height: 112.8161rem;
+      transition: height 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
+    .main-navigation {
+      ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 26.3238rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        li {
+          a {
+            padding: 0 2em;
+            display: inline-flex;
+            align-items: center;
+            height: 135.3793rem;
+            color: #fff;
+            transition: color 0.3s;
+            font-weight: $semiBold;
+          }
+        }
+      }
+    }
   }
-  #site-navigation {
-    ul {
-      display: flex;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      li {
-        &:not(:last-of-type) {
-          margin-right: 112.8161rem;
-        }
-        a {
-          color: #fff;
-          font-size: 39.4856rem;
-          font-weight: $medium;
-          display: block;
-          position: relative;
-          &::after {
-            content: "";
-            background: $kaki;
-            bottom: -15.0421rem;
-            height: 13.1619rem;
-            left: 0;
-            position: absolute;
-            @include transform(scaleX(0));
-            transform-origin: center;
-            transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
-            -moz-transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
-            -webkit-transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
-            width: 100%;
-          }
-          &:hover {
-            &::after {
-              @include transform(scaleX(1));
-            }
-          }
-        }
+  &.sticky {
+    .container {
+      height: 135.3793rem;
+      &::before {
+        @include transform(scaleY(1));
+      }
+      .logo-wrapper {
+        height: 90.2529rem;
       }
     }
   }

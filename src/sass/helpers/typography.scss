@@ -1,0 +1,148 @@
+.richtext {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 0.75em 0;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: none;
+  }
+
+  p,
+  ul {
+    margin: 0 0 1em 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.75;
+
+    li {
+      position: relative;
+      margin: 0 0 0.5em 0;
+      padding: 0 0 0 32px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.75em;
+        width: 16px;
+        height: 1px;
+        background: $orange;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    a {
+      font-weight: 600;
+      text-decoration: underline;
+      color: $dgreen;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    b {
+      font-weight: 600;
+      color: $dgreen;
+    }
+
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6 {
+      margin-top: 1.5em;
+    }
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  &.richtext-lead {
+    p {
+      &:first-child {
+        font-size: 20px;
+        line-height: 1.4;
+        text-transform: uppercase;
+        color: $dgreen;
+      }
+    }
+  }
+
+  &.richtext-ticklist-bullets {
+    ul {
+      margin: 0 0 1em 0;
+      padding: 0;
+      list-style: none;
+      font-size: 16px;
+      line-height: 1.4;
+      text-transform: uppercase;
+
+      li {
+        position: relative;
+        margin: 0 0 0.75em 0;
+        padding: 0 0 0 40px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0.1em;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          background-image: url("../img/interface/ticklist-bullet.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+
+    p + ul {
+      margin-top: 1em;
+    }
+  }
+}
+
+.bg-blue {
+  .richtext {
+    &.richtext-lead {
+      p {
+        &:first-child {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
