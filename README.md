@@ -1,6 +1,6 @@
 # La Clinique De Paris
 
-## Demo [I'm an inline-style link](https://www.google.com)
+## Demo [Link](https://lacliniquedpt.hnikoloski.com/)
 
 ### Status:
 
