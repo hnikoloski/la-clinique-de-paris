@@ -10,12 +10,12 @@ jQuery(document).ready(function ($) {
     setTimeout(function () {
       $("body").removeClass("overflow-hidden");
       $('#preloader').fadeOut(700);
-    }, 400);
+    }, 600);
   } else {
     setTimeout(function () {
       $("body").removeClass("overflow-hidden");
       $('#preloader').fadeOut(300);
-    }, 200);
+    }, 300);
   }
   var staggerUp = {
     duration: 600,
