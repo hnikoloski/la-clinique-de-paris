@@ -34,10 +34,15 @@ if ($services_posts) : ?>
                                 </a>
                             </div>
                         <?php endforeach; ?>
-
                     </div>
+                    <footer>
+                        <div class="services-carousel-nav">
+                            <button class="services-carousel-prev"><span class="material-icons">arrow_back_ios</span></button>
+                            <button class="services-carousel-next"><span class="material-icons">arrow_forward_ios</span></button>
+                        </div>
+                        <div class="services-scrollbar"></div>
+                    </footer>
 
-                    <span class="swiper-notification"></span>
                 </div>
             </div>
         </div>

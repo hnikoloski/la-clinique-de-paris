@@ -208,7 +208,6 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
-
 // Disable Plugin update notification
 function filter_plugin_updates($value)
 {

@@ -259,6 +259,24 @@
         }
       }
     }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-content: center;
+      flex-wrap: wrap;
+      margin-top: 94.0134rem;
+      .services-scrollbar {
+        flex: 0 0 65%;
+        width: 65%;
+        max-width: 65%;
+        height: 1px;
+        background: rgba(27, 53, 93, 0.2);
+        .swiper-scrollbar-drag {
+          background: #e8842d;
+        }
+      }
+    }
   }
   .home-listing {
     .container {

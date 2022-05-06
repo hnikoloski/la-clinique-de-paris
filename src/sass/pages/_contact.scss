@@ -1,0 +1,171 @@
+.page-template-contact-page {
+  .hero {
+    background-color: #1b355d;
+    color: #fefefe;
+    padding: 676.8966rem 270.7586rem 188.0268rem 270.7586rem;
+    .container {
+      padding: 0 109.0556rem;
+      .hero-subheading {
+        position: relative;
+        font-size: 30.0843rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #fefefe;
+        &::before {
+          content: "";
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          display: block;
+          width: 50vw;
+          height: 1px;
+          margin-right: 2em;
+          background: #e8842d;
+        }
+      }
+      .hero-heading {
+        font-size: 188.0268rem;
+        max-width: 10em;
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-top: 0.25em;
+      }
+    }
+  }
+  main {
+    padding: 0 270.7586rem 0 270.7586rem;
+    position: relative;
+    color: #fefefe;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      bottom: 174.8649rem;
+      width: 100%;
+      background: #1b355d;
+    }
+    .container {
+      padding: 0 109.0556rem;
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        .col {
+          padding-left: 0;
+          padding-right: 0;
+          &:first-of-type {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+          }
+          &:last-of-type {
+            flex: 0 0 58.333333%;
+            max-width: 58.333333%;
+            margin-left: 8.333333%;
+            form {
+              width: 100%;
+              br {
+                display: none;
+              }
+              p,
+              .wpcf7-form-control-wrap {
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+          .contact-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            .contact-boxes-item {
+              margin-bottom: 75.2107rem;
+              width: 100%;
+              padding: 0;
+              .contact-box {
+                height: 100%;
+                padding: 10%;
+                background: #263f65;
+                h2 {
+                  margin: 0 0 1em 0;
+                  font-size: 56.408rem;
+                  text-transform: uppercase;
+                  color: #fefefe;
+                  position: relative;
+
+                  &.secondary {
+                    margin: 1em 0 0.5em 0;
+                  }
+                  &::after {
+                    content: "";
+                    display: block;
+                    width: 75.2107rem;
+                    height: 1px;
+                    margin-top: 0.5em;
+                    background: #e8842d;
+                  }
+                }
+                .address {
+                  p {
+                    font-size: 33.8448rem;
+                    line-height: 1.75;
+                    color: #c6cdd7;
+                  }
+                }
+                .contact-details-links {
+                  margin: 1em 0 0 0;
+                  padding: 0;
+                  list-style: none;
+                  line-height: 1.75;
+                  li {
+                    &:not(:last-of-type) {
+                      margin-bottom: 0.25em;
+                    }
+                    a {
+                      color: #c6cdd7;
+                      display: inline-flex;
+                      align-items: center;
+                      transition: color 0.3s;
+                      .material-icons {
+                        margin-right: 0.5em;
+                        color: #546886;
+                        transition: color 0.3s;
+                      }
+                      .text {
+                        position: relative;
+                        display: inline-block;
+                        font-size: 33.8448rem;
+                        &::after {
+                          content: "";
+                          position: absolute;
+                          left: 0;
+                          bottom: 0;
+                          width: 100%;
+                          height: 1px;
+                          background: #e8842d;
+                          transform: scaleX(0);
+                          transform-origin: right;
+                          transition: transform 0.3s
+                            cubic-bezier(0.645, 0.045, 0.355, 1);
+                        }
+                      }
+                      &:hover {
+                        color: #fefefe;
+                        .text {
+                          &::after {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,12 @@
-import Swiper from 'swiper';
+import Swiper, { Navigation, Scrollbar } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/scrollbar';
 var $ = require("jquery");
 $(function () {
 
     // Other services carousel
     const otherServices = new Swiper('.other-services-listings', {
+        modules: [Scrollbar, Navigation],
         slidesPerView: 1.1,
         spaceBetween: 20,
         breakpoints: {
@@ -22,11 +24,11 @@ $(function () {
             },
         },
         navigation: {
-            prevEl: '.other-services-prev',
-            nextEl: '.other-services-next',
+            prevEl: '.services-carousel-prev',
+            nextEl: '.services-carousel-next',
         },
         scrollbar: {
-            el: '.other-services-scrollbar',
+            el: '.services-scrollbar',
             draggable: true,
         },
     });
