@@ -30,7 +30,7 @@
     $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
     require('template-parts/preloader.php');
     ?>
-    <div id="page" class="site">
+    <div id="page" class="site animsition">
         <header id="masthead" class="site-header">
             <div class="container">
                 <a href="<?= home_url(); ?>" class="logo-wrapper d-block">

@@ -61,3 +61,8 @@
     }
   }
 }
+#archive-hero {
+  padding: 564.0805rem 376.0537rem;
+  background: var(--background);
+  @include bg-props(cover, center, no-repeat);
+}

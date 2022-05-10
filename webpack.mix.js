@@ -11,3 +11,4 @@ mix
     // .copyDirectory('src/sass/fonts/roboto', 'dist/css/fonts')
     .setPublicPath('dist')
     .sourceMaps(true, "source-map")
+    .disableNotifications()

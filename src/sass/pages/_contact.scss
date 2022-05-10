@@ -37,6 +37,7 @@
     padding: 0 270.7586rem 0 270.7586rem;
     position: relative;
     color: #fefefe;
+    margin-bottom: 188.0268rem;
     &::before {
       content: "";
       position: absolute;
@@ -62,15 +63,131 @@
             flex: 0 0 58.333333%;
             max-width: 58.333333%;
             margin-left: 8.333333%;
-            form {
-              width: 100%;
-              br {
-                display: none;
-              }
-              p,
-              .wpcf7-form-control-wrap {
+
+            .wpcf7 {
+              position: relative;
+              height: 100%;
+              form {
                 width: 100%;
-                display: block;
+                height: 100%;
+                padding: 10%;
+                color: #1b355d;
+                background: #fefefe;
+                font-size: 33.8448rem;
+                .container {
+                  height: inherit;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-around;
+                  padding: 0;
+                }
+                br {
+                  display: none;
+                }
+                p,
+                .wpcf7-form-control-wrap {
+                  width: 100%;
+                  display: block;
+                }
+
+                input[type="text"],
+                input[type="tel"],
+                input[type="email"],
+                textarea {
+                  width: 100%;
+                  height: 72px;
+                  padding: 0 90.2529rem 0 0;
+                  margin: 0 0 30.0843rem 0;
+                  display: block;
+                  outline: none;
+                  border: none;
+                  border-bottom: 1px solid #c6cdd7;
+                  background: transparent;
+                  box-shadow: none;
+                  appearance: none;
+                  transition: padding 0.3s, border 0.3s, background-color 0.3s;
+                  font-size: 33.8448rem;
+                  font-family: $barlow;
+                  &:focus {
+                    border-bottom: 1px solid #1b355d;
+                    background: rgba(27, 53, 93, 0.03);
+                    padding: 0 45.1264rem;
+                  }
+                  &.wpcf7-not-valid {
+                    border-bottom: 1px solid #dc3232;
+                  }
+                }
+                textarea {
+                  min-height: 144px;
+                  padding: 37.6054rem 90.2529rem 37.6054rem 0;
+                  &:focus {
+                    padding: 37.6054rem 45.1264rem;
+                  }
+                }
+                input[type="submit"] {
+                  width: 100%;
+                  height: 112.8161rem;
+                  font-size: 33.8448rem;
+                  text-align: center;
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+                  color: #fefefe;
+                  border: none;
+                  background: #e8842d;
+                  margin-top: 90.2529rem;
+                  font-weight: $semiBold;
+                }
+                .acceptance {
+                  .wpcf7-list-item {
+                    margin: 0;
+                  }
+                  span {
+                    display: block;
+                    label {
+                      display: flex;
+                      justify-content: flex-start;
+                      align-items: flex-start;
+                      flex-wrap: wrap;
+                      align-content: flex-start;
+                      input[type="checkbox"] {
+                        flex: 0 0 52.6475rem;
+                        max-width: 52.6475rem;
+                        width: 52.6475rem;
+                        height: 52.6475rem;
+                        border: 1px solid #c6cdd7;
+                        margin: 0 28.204rem 0 0;
+                        position: relative;
+                        &:checked {
+                          border: 1px solid #1b355d;
+
+                          &::after {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            left: 16.9224rem;
+                            top: 6.4013rem;
+                            width: 14.4013rem;
+                            height: 29.8027rem;
+                            border: solid #1b355d;
+                            border-width: 0 5.6408rem 5.6408rem 0;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                          }
+                        }
+                      }
+                      .wpcf7-list-item-label {
+                        flex: 0 0 calc(100% - 52.6475rem - 28.204rem);
+                        max-width: calc(100% - 52.6475rem - 28.204rem);
+                        width: calc(100% - 52.6475rem - 28.204rem);
+                      }
+                    }
+                  }
+                }
+                .wpcf7-response-output {
+                  text-align: center;
+                  margin: 0;
+                }
               }
             }
           }

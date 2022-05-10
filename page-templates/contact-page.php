@@ -34,14 +34,7 @@ get_header(); ?>
                                     </a>
                                 </li>
                             </ul>
-                            <?php if (get_field('first_box_title_second')) : ?>
-                                <h2 class="secondary"><?php the_field('first_box_title_second'); ?></h2>
-                            <?php endif; ?>
-                            <?php if (get_field('first_box_content')) : ?>
-                                <div class="address">
-                                    <?php the_field('first_box_content'); ?>
-                                </div>
-                            <?php endif; ?>
+
 
                         </div>
                     </div>
@@ -62,6 +55,18 @@ get_header(); ?>
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="contact-boxes-item fade-in-item">
+                        <div class="contact-box">
+                            <?php if (get_field('first_box_title_second')) : ?>
+                                <h2 class="secondary"><?php the_field('first_box_title_second'); ?></h2>
+                            <?php endif; ?>
+                            <?php if (get_field('first_box_content')) : ?>
+                                <div class="address">
+                                    <?php the_field('first_box_content'); ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
