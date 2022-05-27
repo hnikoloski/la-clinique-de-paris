@@ -283,3 +283,17 @@ function disable_emojis_remove_dns_prefetch($urls, $relation_type)
 
     return $urls;
 }
+
+
+function mindbase_create_acf_pages()
+{
+    if (function_exists('acf_add_options_page')) {
+        acf_add_options_sub_page(array(
+            'page_title'      => 'Services Archive Settings', /* Use whatever title you want */
+
+            'parent_slug'     => 'edit.php?post_type=services', /* Change "services" to fit your situation */
+            'capability' => 'manage_options'
+        ));
+    }
+}
+add_action('init', 'mindbase_create_acf_pages');

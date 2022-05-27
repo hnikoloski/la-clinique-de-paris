@@ -82,7 +82,7 @@
             bottom: 0;
             width: 100%;
             height: 1px;
-            background: #e8842d;
+            background: #a67744;
             @include transform(scaleX(0));
             transform-origin: right;
             -webkit-transform-origin: right;
@@ -122,7 +122,7 @@
         height: 90.2529rem;
         color: #fefefe;
         @include borderRadius(50%);
-        border: 1px solid #e8842d;
+        border: 1px solid #a67744;
         transition: 0.3s;
         padding: 18.8027rem;
         svg {
@@ -131,7 +131,7 @@
           fill: #fefefe;
         }
         &:hover {
-          background-color: #e8842d;
+          background-color: #a67744;
           padding: 13.1619rem;
         }
       }

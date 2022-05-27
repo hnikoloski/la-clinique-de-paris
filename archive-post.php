@@ -1,34 +1,20 @@
-<?php
-
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * 
- */
-
-get_header();
-
-
-
-
-// Get the current page featured image url
-
-
-$featured_image = get_field('hero_bg', 'option');
-
+<?php // Get the current page featured image url
+if (is_home() && get_option('page_for_posts')) {
+    $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')), 'full');
+    $featured_image = $img[0];
+} else {
+}
 
 ?>
 <div id="archive-hero" style="--background: url('<?= $featured_image; ?>')">
-    <h1 class="animate-text" data-splitting><?php _e('Services', 'starter'); ?></h1>
+    <h1><?php _e('Blog', 'starter'); ?></h1>
 </div>
 <?php
 
 // Blog Posts Archive with pagination
 // WP_Query arguments
 $args = array(
-    'post_type'              => array('services'),
+    'post_type'              => array('post'),
     'post_status'            => array('publish'),
     'posts_per_page'         => '5',
     'order'                  => 'DESC',
@@ -41,12 +27,12 @@ $query = new WP_Query($args);
 // The Loop
 if ($query->have_posts()) {
 ?>
-    <main class="container">
+    <div class="container">
         <?php
         while ($query->have_posts()) {
             $query->the_post();
         ?>
-            <article class="blog-card fade-in-item">
+            <article class="blog-card">
                 <a href="<?php the_permalink(); ?>" class="single">
                     <div class="content">
                         <h4 class="heading"><?php the_title(); ?></h4>
@@ -76,10 +62,10 @@ if ($query->have_posts()) {
         <?php
         }
         ?>
-    </main>
-<?php
+
+    <?php
 } else { ?>
-<?php
+    <?php
 }
 
 // Restore original Post Data
@@ -95,9 +81,4 @@ the_posts_pagination(array(
 
 // Restore original Post Data
 wp_reset_postdata();
-?>
-
-
-
-<?php
-get_footer();
+    ?>

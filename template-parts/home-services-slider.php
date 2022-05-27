@@ -21,7 +21,7 @@ if ($services_posts) : ?>
                                             <div class="arrow-link arrow-link-white">
                                                 <div class="icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.607 40.607">
-                                                        <path d="M20,0,34.142,5.858,40,20,34.142,34.142,20,40,5.858,34.142,0,20,5.858,5.858Z" transform="translate(0.304 40.303) rotate(-90)" fill="currentColor" stroke="#E8842D" stroke-miterlimit="10" stroke-width="0.561"></path>
+                                                        <path d="M20,0,34.142,5.858,40,20,34.142,34.142,20,40,5.858,34.142,0,20,5.858,5.858Z" transform="translate(0.304 40.303) rotate(-90)" fill="currentColor" stroke="#A67744" stroke-miterlimit="10" stroke-width="0.561"></path>
                                                     </svg>
                                                     <span class="material-icons">arrow_forward_ios</span>
                                                 </div>
@@ -37,8 +37,8 @@ if ($services_posts) : ?>
                     </div>
                     <footer>
                         <div class="services-carousel-nav">
-                            <button class="services-carousel-prev"><span class="material-icons">arrow_back_ios</span></button>
-                            <button class="services-carousel-next"><span class="material-icons">arrow_forward_ios</span></button>
+                            <button class="services-carousel-prev" tabindex="-1" aria-label="Previous slide"><span class="material-icons">arrow_back_ios</span></button>
+                            <button class="services-carousel-next" tabindex="0" aria-label="Next slide"><span class="material-icons">arrow_forward_ios</span></button>
                         </div>
                         <div class="services-scrollbar"></div>
                     </footer>

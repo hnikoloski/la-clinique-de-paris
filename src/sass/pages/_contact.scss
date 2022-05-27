@@ -1,6 +1,6 @@
 .page-template-contact-page {
   .hero {
-    background-color: #1b355d;
+    background-color: #304f54;
     color: #fefefe;
     padding: 676.8966rem 270.7586rem 188.0268rem 270.7586rem;
     .container {
@@ -20,7 +20,7 @@
           width: 50vw;
           height: 1px;
           margin-right: 2em;
-          background: #e8842d;
+          background: #a67744;
         }
       }
       .hero-heading {
@@ -45,7 +45,7 @@
       top: -1px;
       bottom: 174.8649rem;
       width: 100%;
-      background: #1b355d;
+      background: #304f54;
     }
     .container {
       padding: 0 109.0556rem;
@@ -71,7 +71,7 @@
                 width: 100%;
                 height: 100%;
                 padding: 10%;
-                color: #1b355d;
+                color: #304f54;
                 background: #fefefe;
                 font-size: 33.8448rem;
                 .container {
@@ -109,7 +109,7 @@
                   font-size: 33.8448rem;
                   font-family: $barlow;
                   &:focus {
-                    border-bottom: 1px solid #1b355d;
+                    border-bottom: 1px solid #304f54;
                     background: rgba(27, 53, 93, 0.03);
                     padding: 0 45.1264rem;
                   }
@@ -133,7 +133,7 @@
                   letter-spacing: 0.05em;
                   color: #fefefe;
                   border: none;
-                  background: #e8842d;
+                  background: #a67744;
                   margin-top: 90.2529rem;
                   font-weight: $semiBold;
                 }
@@ -158,7 +158,7 @@
                         margin: 0 28.204rem 0 0;
                         position: relative;
                         &:checked {
-                          border: 1px solid #1b355d;
+                          border: 1px solid #304f54;
 
                           &::after {
                             content: "";
@@ -168,7 +168,7 @@
                             top: 6.4013rem;
                             width: 14.4013rem;
                             height: 29.8027rem;
-                            border: solid #1b355d;
+                            border: solid #304f54;
                             border-width: 0 5.6408rem 5.6408rem 0;
                             -webkit-transform: rotate(45deg);
                             -ms-transform: rotate(45deg);
@@ -219,7 +219,7 @@
                     width: 75.2107rem;
                     height: 1px;
                     margin-top: 0.5em;
-                    background: #e8842d;
+                    background: #a67744;
                   }
                 }
                 .address {
@@ -259,7 +259,7 @@
                           bottom: 0;
                           width: 100%;
                           height: 1px;
-                          background: #e8842d;
+                          background: #a67744;
                           transform: scaleX(0);
                           transform-origin: right;
                           transition: transform 0.3s

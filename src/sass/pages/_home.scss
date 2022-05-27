@@ -104,7 +104,7 @@
   //         line-height: 1.2;
   //         text-transform: uppercase;
   //         letter-spacing: 0.05em;
-  //         border-left: 1px solid #e8842d;
+  //         border-left: 1px solid #A67744;
   //       }
   //       h3 {
   //         margin-top: 1em;
@@ -182,7 +182,7 @@
       top: -1px;
       width: 100%;
       height: calc(50% - 188.0268rem);
-      background: #1b355d;
+      background: #304f54;
     }
     header {
       padding-top: 329.0469rem;
@@ -209,7 +209,7 @@
           }
           .icon {
             svg {
-              color: #e8842d;
+              color: #a67744;
             }
           }
         }
@@ -253,7 +253,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: #1b355d;
+            background: #304f54;
             opacity: 0.1;
           }
         }
@@ -266,14 +266,93 @@
       align-content: center;
       flex-wrap: wrap;
       margin-top: 94.0134rem;
+      .services-carousel-nav {
+        .services-carousel-prev {
+          margin-right: 15.0421rem;
+        }
+        .services-carousel-prev,
+        .services-carousel-next {
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          width: 120.3372rem;
+          height: 120.3372rem;
+          overflow: hidden;
+          padding: 0;
+          color: #304f54;
+          border: none;
+          background: transparent;
+          transition: opacity 0.3s;
+          opacity: 0.7;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../../assets/icons/poly-blue.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.25;
+            transition: opacity 0.3s;
+          }
+          .material-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            font-size: 22.5632rem;
+          }
+          &.swiper-button-disabled {
+            opacity: 0.5;
+          }
+          &:hover {
+            &::before {
+              opacity: 1;
+              background-image: url("../../assets/icons/poly-fill-orange.svg");
+            }
+
+            .material-icons {
+              color: #fff;
+              transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            }
+          }
+        }
+        .services-carousel-prev {
+          .material-icons {
+            padding-left: 7.5211rem;
+            text-shadow: 120.3372rem 0px 0px #fff;
+          }
+          &:hover {
+            .material-icons {
+              @include transform(translateX(-100%));
+            }
+          }
+        }
+        .services-carousel-next {
+          .material-icons {
+            padding-left: 7.5211rem;
+            text-shadow: -120.3372rem 0px 0px #fff;
+          }
+          &:hover {
+            .material-icons {
+              @include transform(translateX(100%));
+            }
+          }
+        }
+      }
+
       .services-scrollbar {
-        flex: 0 0 65%;
-        width: 65%;
-        max-width: 65%;
+        flex: 0 0 85%;
+        width: 85%;
+        max-width: 85%;
         height: 1px;
         background: rgba(27, 53, 93, 0.2);
         .swiper-scrollbar-drag {
-          background: #e8842d;
+          background: #a67744;
         }
       }
     }
@@ -301,7 +380,7 @@
           font-size: 45.1264rem;
           line-height: 1.4;
           text-transform: capitalize;
-          color: #1b355d;
+          color: #304f54;
           font-weight: $medium;
           position: relative;
           &::before {

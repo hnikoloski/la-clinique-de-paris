@@ -20,102 +20,94 @@ jQuery(document).ready(function ($) {
     overlay: false,
   });
 
-  if ($("body").hasClass("home")) {
-    setTimeout(function () {
-      $("body").removeClass("overflow-hidden");
-      $('#preloader').fadeOut(700);
-      initAll();
-    }, 600);
-  } else {
-    setTimeout(function () {
-      $("body").removeClass("overflow-hidden");
-      $('#preloader').fadeOut(300);
-    }, 300);
-    initAll();
-  }
-  function initAll() {
 
-    $('.animsition').on('animsition.inEnd', function () {
-      var staggerUp = {
-        duration: 600,
-        interval: 100,
-        distance: '50px',
-        viewFactor: 0.75,
-        easing: 'ease',
-        delay: 200,
-      };
-      ScrollReveal().reveal('.richtext-fade-in > *', staggerUp);
-      ScrollReveal().reveal('.fade-in-item', staggerUp);
-      ScrollReveal().reveal('.home-services-listings-item', staggerUp);
-      ScrollReveal().reveal('.link-listings-item-fadein', staggerUp);
-      // Text animation
-      $(".animate-text").each(function () {
-        var text = $(this);
-        var characters = text.find(".char");
 
-        const textTimeline = gsap.timeline({
 
-          scrollTrigger: {
-            trigger: text,
-            start: "top 75%",
-            // markers: true,
-          },
-        });
+  $('.animsition').on('animsition.inEnd', function () {
+    $("body").removeClass("overflow-hidden");
+    $('#preloader').fadeOut(500);
 
-        textTimeline.to(characters, { duration: 1.2, stagger: 0.01, ease: Expo.easeOut, transform: 'translateY(0)' });
+    var staggerUp = {
+      duration: 600,
+      interval: 100,
+      distance: '50px',
+      viewFactor: 0.75,
+      easing: 'ease',
+      delay: 200,
+    };
+    ScrollReveal().reveal('.richtext-fade-in > *', staggerUp);
+    ScrollReveal().reveal('.fade-in-item', staggerUp);
+    ScrollReveal().reveal('.home-services-listings-item', staggerUp);
+    ScrollReveal().reveal('.link-listings-item-fadein', staggerUp);
+    ScrollReveal().reveal('.single-services main .cards-wrapper .card .inner .front .card-content .wrap > p', staggerUp);
+
+    // Text animation
+    $(".animate-text").each(function () {
+      var text = $(this);
+      var characters = text.find(".char");
+
+      const textTimeline = gsap.timeline({
+
+        scrollTrigger: {
+          trigger: text,
+          start: "top 75%",
+          // markers: true,
+        },
       });
 
-      // Body text animation
-      $(".animate-text-body").each(function () {
-        var text = $(this);
-        var characters = text.find(".char");
+      textTimeline.to(characters, { duration: 1.2, stagger: 0.01, ease: Expo.easeOut, transform: 'translateY(0)' });
+    });
 
-        const textTimeline = gsap.timeline({
+    // Body text animation
+    $(".animate-text-body").each(function () {
+      var text = $(this);
+      var characters = text.find(".char");
 
-          scrollTrigger: {
-            trigger: text,
-            start: "top 50%",
-            // markers: true,
-          },
-        });
+      const textTimeline = gsap.timeline({
 
-        textTimeline.to(characters, { duration: 1.2, stagger: 0.005, ease: Expo.easeOut, transform: 'translateY(0)' });
-      });
-      $(".animate-ltr").each(function () {
-        var text = $(this);
-        var characters = text;
-
-        const textTimeline = gsap.timeline({
-
-          scrollTrigger: {
-            trigger: text,
-            start: "top 50%",
-            // markers: true,
-          },
-        });
-
-        textTimeline.to(characters, { duration: 2.2, stagger: 0.005, ease: Expo.easeOut, transform: 'translateX(0)' });
+        scrollTrigger: {
+          trigger: text,
+          start: "top 50%",
+          // markers: true,
+        },
       });
 
-      $(".home-drops").each(function () {
-        var container = $(".home-intro");
-        var target = $(this);
+      textTimeline.to(characters, { duration: 1.2, stagger: 0.005, ease: Expo.easeOut, transform: 'translateY(0)' });
+    });
+    $(".animate-ltr").each(function () {
+      var text = $(this);
+      var characters = text;
 
-        const tl = gsap.timeline({
+      const textTimeline = gsap.timeline({
 
-          scrollTrigger: {
-            trigger: container,
-            start: "top 50%",
-            end: "bottom top",
-            scrub: true,
-            // markers: true,
-          },
-        });
-
-        tl.to(target, { opacity: 1, xPercent: -5, yPercent: -25, ease: 'none', duration: 0.5 })
-          .to(target, { opacity: 0, xPercent: -10, yPercent: -50, ease: 'none', duration: 0.5 }, 0.5);
+        scrollTrigger: {
+          trigger: text,
+          start: "top 50%",
+          // markers: true,
+        },
       });
-    })
-  }
+
+      textTimeline.to(characters, { duration: 2.2, stagger: 0.005, ease: Expo.easeOut, transform: 'translateX(0)' });
+    });
+
+    $(".home-drops").each(function () {
+      var container = $(".home-intro");
+      var target = $(this);
+
+      const tl = gsap.timeline({
+
+        scrollTrigger: {
+          trigger: container,
+          start: "top 50%",
+          end: "bottom top",
+          scrub: true,
+          // markers: true,
+        },
+      });
+
+      tl.to(target, { opacity: 1, xPercent: -5, yPercent: -25, ease: 'none', duration: 0.5 })
+        .to(target, { opacity: 0, xPercent: -10, yPercent: -50, ease: 'none', duration: 0.5 }, 0.5);
+    });
+  })
 
 });

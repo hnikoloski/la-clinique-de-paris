@@ -1,0 +1,148 @@
+.single-services {
+  &::after {
+    display: none;
+  }
+  main {
+    max-width: 2820.4024rem;
+    margin: 0 auto;
+    padding: 188.0268rem 0;
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      align-items: flex-start;
+      justify-content: space-around;
+      .card {
+        flex: 0 0 calc(33.33% - 75.2107rem);
+        max-width: calc(33.33% - 75.2107rem);
+        width: calc(33.33% - 75.2107rem);
+        margin: 0 37.6054rem 65.8094rem 37.6054rem;
+        padding: 94.0134rem 47.0067rem 282.0402rem 47.0067rem;
+        .inner {
+          perspective: 1000px;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          .material-icons-outlined {
+            font-size: 45.1264rem;
+            position: absolute;
+            right: 28.204rem;
+            bottom: 28.204rem;
+            cursor: pointer;
+            color: #304f54;
+            transition: 0.3s;
+            z-index: 99;
+            &:hover {
+              right: 18.8027rem;
+            }
+          }
+          .card-image {
+            width: 100%;
+            height: 100%;
+            @include borderRadius(47.0067rem);
+            overflow: hidden;
+            img {
+              @include fullSizeImg(cover);
+            }
+          }
+          &.active {
+            transform: rotateY(180deg);
+          }
+          .front,
+          .back {
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            @include borderRadius(47.0067rem);
+          }
+          .front {
+            position: relative;
+            overflow: hidden;
+            background-color: rgb(28, 54, 92, 0.3);
+            padding: 47.0067rem;
+            .card-content {
+              position: relative;
+              z-index: 2;
+              .wrap {
+                margin-top: 47.0067rem;
+                p {
+                  position: relative;
+                  padding-left: 84.6121rem;
+                  font-size: 41.3659rem;
+                  color: #304f54;
+                  line-height: 1.2;
+                  &:not(:last-of-type) {
+                    margin-bottom: 28.204rem;
+                  }
+                  &::before {
+                    content: "\e798";
+                    font-family: "Material Icons Outlined";
+                    position: absolute;
+                    font-size: 37.6054rem;
+                    top: 5.6408rem;
+                    left: 22.5632rem;
+                    color: #a67744;
+                  }
+                }
+              }
+            }
+            .liquid {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              overflow: hidden;
+              //   width: 752.1073rem;
+              width: 100%;
+              height: 658.0939rem;
+              //   background: #eaedf1;
+              transition: 0.5s;
+              z-index: 1;
+            }
+
+            .liquid::after,
+            .liquid::before {
+              content: "";
+              width: 200%;
+              height: 200%;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translate(-50%, -75%);
+              //   background: #eaedf1;
+            }
+
+            .liquid::before {
+              border-radius: 45%;
+              background: #eaedf1;
+              animation: animate 15s linear infinite;
+            }
+
+            .liquid::after {
+              border-radius: 40%;
+              background: #eaedf1;
+              animation: animate 20s linear infinite;
+            }
+
+            @keyframes animate {
+              0% {
+                transform: translate(-50%, -75%) rotate(0deg);
+              }
+              100% {
+                transform: translate(-50%, -75%) rotate(360deg);
+              }
+            }
+          }
+          .back {
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include transform(rotateY(180deg));
+          }
+        }
+      }
+    }
+  }
+}

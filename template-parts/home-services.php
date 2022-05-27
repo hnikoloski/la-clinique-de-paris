@@ -28,7 +28,7 @@
                                     <a class="arrow-link" href="<?php the_permalink(); ?>">
                                         <div class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.607 40.607">
-                                                <path d="M20,0,34.142,5.858,40,20,34.142,34.142,20,40,5.858,34.142,0,20,5.858,5.858Z" transform="translate(0.304 40.303) rotate(-90)" fill="currentColor" stroke="#E8842D" stroke-miterlimit="10" stroke-width="0.561"></path>
+                                                <path d="M20,0,34.142,5.858,40,20,34.142,34.142,20,40,5.858,34.142,0,20,5.858,5.858Z" transform="translate(0.304 40.303) rotate(-90)" fill="currentColor" stroke="#A67744" stroke-miterlimit="10" stroke-width="0.561"></path>
                                             </svg>
                                             <span class="material-icons">arrow_forward_ios</span>
                                         </div>
