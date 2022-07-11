@@ -9,10 +9,10 @@ html {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
 }
-::selection {
-  color: #a67744;
-  background: rgba(255, 255, 255, 0.99);
-}
+// ::selection {
+//   color: #a67744;
+//   background: rgba(255, 255, 255, 0.99);
+// }
 
 body {
   font-size: 32rem;

@@ -1,6 +1,9 @@
 #hero-home {
   padding: 443.7433rem 28.204rem 418.0268rem 362.8918rem;
   position: relative;
+  @include for-phone {
+    padding: 1640rem 225rem 1500rem 225rem;
+  }
   video {
     position: absolute;
     left: 0;
@@ -25,6 +28,9 @@
     position: relative;
     z-index: 1;
     color: #fefefe;
+    @include for-phone {
+      max-width: 90%;
+    }
     h1 {
       display: inline-block;
       margin: 0;
@@ -34,11 +40,17 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       border-left: 1px solid #a67744;
+      @include for-phone {
+        font-size: 140rem;
+      }
     }
     h2 {
       font-size: 103.4148rem;
       margin-top: 103.4148rem;
       margin-bottom: 291.4416rem;
+      @include for-phone {
+        font-size: 300rem;
+      }
       strong,
       b {
         font-weight: $semiBold;
@@ -57,6 +69,9 @@
         width: 1px;
         height: 416rem;
         background: rgba(255, 255, 255, 0.25);
+        @include for-phone {
+          height: 1498rem;
+        }
       }
     }
   }

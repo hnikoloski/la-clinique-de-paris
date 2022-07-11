@@ -16,6 +16,10 @@
       z-index: 1;
       width: 50%;
       height: 1746.7692rem;
+      @include for-phone {
+        width: 95%;
+        height: 3645rem;
+      }
     }
 
     .home-intro-image-01,
@@ -30,6 +34,13 @@
       width: 658.0939rem;
       height: 470.0671rem;
       @include bg-props(cover, center, no-repeat);
+      @include for-phone {
+        z-index: 2;
+        right: 0;
+        top: calc(1830rem + 37.5vw);
+        width: 50vw;
+        height: 37.5vw;
+      }
     }
 
     .home-intro-image-02 {
@@ -39,6 +50,9 @@
       transform: translateY(50%);
       bottom: 0;
       display: block;
+      @include for-phone{
+        display: none;
+      }
     }
 
     .home-intro-content {
@@ -49,12 +63,19 @@
       width: 50%;
       padding-left: 0;
       padding-right: 7.5vw;
-
+      @include for-phone{
+        width: 100%;
+        padding-left: 160rem;
+        padding-right: 160rem;
+      }
       .container {
         max-width: 1410.2012rem;
         padding-left: 5vw;
         width: 100%;
-
+        @include for-phone{
+          max-width: 100%;
+          padding-left: 0;
+        }
         .home-intro-heading {
           max-width: 100%;
           margin: 0 0 1em 0;
@@ -66,10 +87,18 @@
           transform: translateX(-10vw);
           color: $blue;
           font-weight: $medium;
+          @include for-phone{
+            font-size: 300rem;
+            transform: translateX(0);
+
+          }
         }
 
         .richtext {
           max-width: 902.5288rem;
+          @include for-phone{
+            max-width: 100%;
+          }
           p {
             margin: 0 0 1em 0;
             padding: 0;
@@ -78,6 +107,9 @@
             font-size: 33.8448rem;
             &:not(:last-of-type) {
               margin: 0 0 1em 0;
+            }
+            @include for-phone{
+              font-size: 160rem;
             }
           }
         }
@@ -190,8 +222,9 @@
       h2 {
         color: #fefefe;
         font-size: 122.2174rem;
-        font-weight: 400;
+        font-weight: $bold;
         text-transform: uppercase;
+        font-family: $ptSerif;
       }
     }
     .container {

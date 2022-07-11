@@ -33,7 +33,7 @@ $featured_image = get_the_post_thumbnail_url();
                                 <?php $backImage = get_sub_field('back_image'); ?>
                                 <img src="<?= $backImage; ?>" alt="<?= $title; ?>">
                             </div>
-                            <span class="material-icons-outlined trigger">
+                            <span class="material-icons-outlined trigger second">
                                 west
                             </span>
                         </div>

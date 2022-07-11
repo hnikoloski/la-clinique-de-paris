@@ -6,6 +6,11 @@
   width: 100%;
   box-sizing: content-box;
   border-top: 7.5211rem solid #a67744;
+  @include for-phone {
+    border-top-width: 40rem;
+    padding: 150rem 0;
+  }
+
   .container {
     height: 300.8429rem;
     position: relative;
@@ -33,18 +38,88 @@
       transform: scaleY(0);
       transform-origin: top;
       transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      @include for-phone {
+        top: -170rem;
+        height: calc(100% + 300rem);
+      }
     }
     .logo-wrapper {
       display: block;
       height: 112.8161rem;
       transition: height 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      z-index: 9;
+      @include for-phone {
+        height: 300rem;
+      }
       img {
         display: block;
         width: auto;
         height: 100%;
       }
     }
+    #menu-trigger {
+      display: none;
+      @include for-phone {
+        display: block;
+        width: 250rem;
+        height: 250rem;
+        position: relative;
+        z-index: 9;
+        span {
+          display: block;
+          width: 100%;
+          height: 20rem;
+          background: #fff;
+          position: absolute;
+          left: 0;
+          transition: 0.6s;
+          &:nth-of-type(1) {
+            top: 0;
+          }
+          &:nth-of-type(2) {
+            top: 50%;
+            @include transform(translateY(-50%));
+          }
+          &:nth-of-type(3) {
+            bottom: 0;
+          }
+        }
+        &.active {
+          span {
+            top: 50%;
+            left: 50%;
+            @include transform-origin(0);
+            &:nth-of-type(1) {
+              @include transform(rotate(45deg) translate(-50%, -50%));
+            }
+            &:nth-of-type(2) {
+              width: 0;
+              left: 0;
+            }
+            &:nth-of-type(3) {
+              transform: rotate(-45deg);
+              @include transform(rotate(-45deg) translate(-50%, -50%));
+            }
+          }
+        }
+      }
+    }
     .main-navigation {
+      @include for-phone {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #a67744;
+        padding: 850rem 150rem 150rem 150rem;
+        @include transform(scaleY(0) translateY(-100%));
+        @include transform-origin(top);
+        transition: 0.6s;
+        &.active {
+          @include transform(scaleY(1) translateY(0));
+        }
+      }
       ul {
         display: flex;
         margin: 0;
@@ -53,7 +128,24 @@
         font-size: 26.3238rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
+        @include for-phone {
+          font-size: 220rem;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+        }
         li {
+          @include for-phone {
+            width: fit-content;
+            width: -moz-fit-content;
+            display: block;
+            &:not(:last-of-type) {
+              margin-bottom: 350rem;
+            }
+          }
           a {
             padding: 0 2em;
             display: inline-flex;
@@ -62,6 +154,12 @@
             color: #fff;
             transition: color 0.3s;
             font-weight: $semiBold;
+            @include for-phone {
+              padding: 0;
+              display: block;
+              width: fit-content;
+              width: -moz-fit-content;
+            }
           }
         }
       }
@@ -70,11 +168,17 @@
   &.sticky {
     .container {
       height: 135.3793rem;
+      @include for-phone {
+        height: 455rem;
+      }
       &::before {
         @include transform(scaleY(1));
       }
       .logo-wrapper {
         height: 90.2529rem;
+        @include for-phone {
+          height: 300rem;
+        }
       }
     }
   }

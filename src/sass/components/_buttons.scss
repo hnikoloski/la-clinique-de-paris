@@ -16,6 +16,10 @@
     display: block;
     padding: 0;
     border: none;
+    @include for-phone {
+      width: 480rem;
+      height: 480rem;
+    }
     &:hover {
       .icon {
         .material-icons {
@@ -36,6 +40,10 @@
         justify-content: center;
         align-items: center;
         font-size: 30.0843rem;
+        @include for-phone {
+          text-shadow: -480rem 0px 0px #fefefe;
+          font-size: 160rem;
+        }
       }
     }
     &-down {

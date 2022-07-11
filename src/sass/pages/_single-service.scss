@@ -6,18 +6,88 @@
     max-width: 2820.4024rem;
     margin: 0 auto;
     padding: 188.0268rem 0;
+    .the-content-wrapper {
+      margin-bottom: 84.6121rem;
+      font-size: 33.8448rem;
+      ul {
+        margin: 1em 0;
+        li {
+          padding-left: 84.6121rem;
+          margin: 0 0 0.75em 0;
+          font-size: 30.0843rem;
+          line-height: 1.4;
+          font-weight: $medium;
+          position: relative;
+          &::before {
+            content: "\e798";
+            font-family: "Material Icons Outlined";
+            position: absolute;
+            font-size: 37.6054rem;
+            top: 0;
+            left: 22.5632rem;
+            color: $orange;
+          }
+        }
+      }
+      a {
+        color: #304f54;
+        font-weight: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      p {
+        &:not(:last-of-type) {
+          margin-bottom: 47.0067rem;
+        }
+      }
+      strong,
+      b {
+        font-weight: $bold;
+      }
+      h6 {
+        font-size: 33.8448rem;
+        @include for-phone {
+          font-size: 180rem;
+        }
+      }
+      h5 {
+        font-size: 37.6054rem;
+        @include for-phone {
+          font-size: 200rem;
+        }
+      }
+      h4 {
+        font-size: 41.3659rem;
+        @include for-phone {
+          font-size: 220rem;
+        }
+      }
+      h3 {
+        font-size: 45.1264rem;
+        @include for-phone {
+          font-size: 240rem;
+        }
+      }
+      h2 {
+        font-size: 48.887rem;
+        @include for-phone {
+          font-size: 260rem;
+        }
+      }
+    }
     .cards-wrapper {
       display: flex;
       flex-wrap: wrap;
-      align-content: flex-start;
-      align-items: flex-start;
+      align-content: stretch;
+      align-items: stretch;
       justify-content: space-around;
       .card {
         flex: 0 0 calc(33.33% - 75.2107rem);
         max-width: calc(33.33% - 75.2107rem);
         width: calc(33.33% - 75.2107rem);
         margin: 0 37.6054rem 65.8094rem 37.6054rem;
-        padding: 94.0134rem 47.0067rem 282.0402rem 47.0067rem;
+        padding: 94.0134rem 47.0067rem;
         .inner {
           perspective: 1000px;
           position: relative;
@@ -34,8 +104,22 @@
             color: #304f54;
             transition: 0.3s;
             z-index: 99;
+            background: #fff;
+            @include borderRadius(50%);
+            width: 60.1686rem;
+            height: 60.1686rem;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
             &:hover {
               right: 18.8027rem;
+              box-shadow: 0 5.6408rem 11.2816rem rgba(0, 0, 0, 0.3);
+            }
+            &.second {
+              &:hover {
+                right: 37.6054rem;
+              }
             }
           }
           .card-image {
@@ -62,10 +146,14 @@
             position: relative;
             overflow: hidden;
             background-color: rgb(28, 54, 92, 0.3);
-            padding: 47.0067rem;
+            padding: 100.0067rem 47.0067rem;
             .card-content {
               position: relative;
               z-index: 2;
+              .heading {
+                font-size: 75.2107rem;
+                margin-bottom: 84.6121rem;
+              }
               .wrap {
                 margin-top: 47.0067rem;
                 p {
@@ -96,7 +184,7 @@
               overflow: hidden;
               //   width: 752.1073rem;
               width: 100%;
-              height: 658.0939rem;
+              height: 100%;
               //   background: #eaedf1;
               transition: 0.5s;
               z-index: 1;

@@ -34,3 +34,111 @@
     }
   }
 }
+body.single-post {
+  .hero {
+    background-color: #304f54;
+    color: #fefefe;
+    padding: 676.8966rem 270.7586rem 188.0268rem 270.7586rem;
+    background: var(--background);
+    @include bg-props(cover, center, no-repeat);
+    .hero-subheading {
+      position: relative;
+      font-size: 30.0843rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fefefe;
+      &::before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        display: block;
+        width: 50vw;
+        height: 1px;
+        margin-right: 2em;
+        background: #a67744;
+      }
+    }
+    .hero-heading {
+      font-size: 188.0268rem;
+      max-width: 10em;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-top: 0.25em;
+    }
+  }
+  .blog-main-container {
+    max-width: 2820.4024rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 188.0268rem 0;
+    font-size: 30.0843rem;
+    ul {
+      margin: 1em 0;
+      li {
+        padding-left: 84.6121rem;
+        margin: 0 0 0.75em 0;
+        font-size: 30.0843rem;
+        line-height: 1.4;
+        font-weight: $medium;
+        position: relative;
+        &::before {
+          content: "\e798";
+          font-family: "Material Icons Outlined";
+          position: absolute;
+          font-size: 37.6054rem;
+          top: 0;
+          left: 22.5632rem;
+          color: $orange;
+        }
+      }
+    }
+    a {
+      color: #304f54;
+      font-weight: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      &:not(:last-of-type) {
+        margin-bottom: 47.0067rem;
+      }
+    }
+    strong,
+    b {
+      font-weight: $bold;
+    }
+    h6 {
+      font-size: 33.8448rem;
+      @include for-phone {
+        font-size: 180rem;
+      }
+    }
+    h5 {
+      font-size: 37.6054rem;
+      @include for-phone {
+        font-size: 200rem;
+      }
+    }
+    h4 {
+      font-size: 41.3659rem;
+      @include for-phone {
+        font-size: 220rem;
+      }
+    }
+    h3 {
+      font-size: 45.1264rem;
+      @include for-phone {
+        font-size: 240rem;
+      }
+    }
+    h2 {
+      font-size: 48.887rem;
+      @include for-phone {
+        font-size: 260rem;
+      }
+    }
+  }
+}

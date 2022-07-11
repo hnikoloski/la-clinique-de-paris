@@ -61,5 +61,15 @@ jQuery(document).ready(function ($) {
     $('.current-year').text(new Date().getFullYear());
   }
 
+  $('.hero-scroll-btn').on('click', function (e) {
+    e.preventDefault();
+    // $('html, body').animate({
+    //   scrollTop: $('.hero-scroll-btn').offset().top
+    // }, 1000);
+    // Scroll to div with the id of the button's href
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top
+    }, 100);
 
+  });
 });

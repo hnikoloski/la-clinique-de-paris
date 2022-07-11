@@ -19,6 +19,7 @@
       text-transform: uppercase;
       font-weight: $medium;
       z-index: 9;
+      font-family: $ptSerif;
       &::before {
         content: "";
         position: absolute;

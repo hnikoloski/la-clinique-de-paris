@@ -1,14 +1,10 @@
 .page-template-about-page {
   .hero {
-    padding: 564.0805rem 376.0537rem;
-    background: var(--background);
-    @include bg-props(cover, center, no-repeat);
-  }
-  .hero {
     background-color: #304f54;
     color: #fefefe;
     padding: 676.8966rem 270.7586rem 188.0268rem 270.7586rem;
-
+    background: var(--background);
+    @include bg-props(cover, center, no-repeat);
     .hero-subheading {
       position: relative;
       font-size: 30.0843rem;
@@ -34,6 +30,7 @@
       line-height: 1;
       text-transform: uppercase;
       margin-top: 0.25em;
+      font-family: $ptSerif;
     }
   }
 

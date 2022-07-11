@@ -1,0 +1,180 @@
+.media_posts-template-default {
+  #inner-hero {
+    .hero-scroll-btn {
+      width: 263.2376rem;
+      height: 131.6188rem;
+      padding: 26.3238rem 0 0 0;
+
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+      overflow: hidden;
+      margin: 0 auto;
+      color: #fefefe;
+      border: none;
+      background-color: transparent;
+      background-image: url("../../assets/icons/hero-scroll.svg");
+      background-position: center top;
+      background-size: 100% auto;
+      position: absolute;
+      bottom: 0;
+      @include hor-center();
+      z-index: 9;
+      &::before,
+      &::after {
+        content: "arrow_forward_ios";
+        position: absolute;
+        font-family: "Material Icons";
+      }
+      &::before {
+        opacity: 0;
+        -webkit-transform: translateY(-37.6054rem) rotate(90deg);
+        transform: translateY(-37.6054rem) rotate(90deg);
+      }
+      &::after {
+        opacity: 1;
+        -webkit-transform: translateY(0) rotate(90deg);
+        transform: translateY(0) rotate(90deg);
+      }
+      &:hover {
+        &::before,
+        &::after {
+          transition: opacity 0.3s, -webkit-transform 0.3s;
+          transition: transform 0.3s, opacity 0.3s;
+          transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+        }
+        &::before {
+          opacity: 1;
+          -webkit-transform: translateY(0) rotate(90deg);
+          transform: translateY(0) rotate(90deg);
+        }
+        &::after {
+          opacity: 0;
+          -webkit-transform: translateY(37.6054rem) rotate(90deg);
+          transform: translateY(37.6054rem) rotate(90deg);
+        }
+      }
+    }
+  }
+  .slider-wrapper {
+    overflow-x: hidden;
+    padding: 225.6322rem 0;
+    .swiper-wrapper {
+      height: 1222.1744rem;
+    }
+    .swiper-slide {
+      cursor: pointer;
+      img {
+        transition: 0.3s;
+      }
+      &:hover {
+        img {
+          @include transform(scale(1.01));
+        }
+      }
+    }
+
+    footer {
+      padding: 0 379.8142rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-content: center;
+      flex-wrap: wrap;
+      margin-top: 94.0134rem;
+      .gallery-carousel-nav {
+        .gallery-carousel-prev {
+          margin-right: 15.0421rem;
+        }
+        .gallery-carousel-prev,
+        .gallery-carousel-next {
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          width: 120.3372rem;
+          height: 120.3372rem;
+          overflow: hidden;
+          padding: 0;
+          color: #304f54;
+          border: none;
+          background: transparent;
+          transition: opacity 0.3s;
+          opacity: 0.7;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../../assets/icons/poly-blue.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.25;
+            transition: opacity 0.3s;
+          }
+          .material-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            font-size: 22.5632rem;
+          }
+          &.swiper-button-disabled {
+            opacity: 0.5;
+          }
+          &:hover {
+            &::before {
+              opacity: 1;
+              background-image: url("../../assets/icons/poly-fill-orange.svg");
+            }
+
+            .material-icons {
+              color: #fff;
+              transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            }
+          }
+        }
+        .gallery-carousel-prev {
+          .material-icons {
+            padding-left: 7.5211rem;
+            text-shadow: 120.3372rem 0px 0px #fff;
+          }
+          &:hover {
+            .material-icons {
+              @include transform(translateX(-100%));
+            }
+          }
+        }
+        .gallery-carousel-next {
+          .material-icons {
+            padding-left: 7.5211rem;
+            text-shadow: -120.3372rem 0px 0px #fff;
+          }
+          &:hover {
+            .material-icons {
+              @include transform(translateX(100%));
+            }
+          }
+        }
+      }
+
+      .gallery-scrollbar {
+        flex: 0 0 85%;
+        width: 85%;
+        max-width: 85%;
+        height: 1px;
+        background: rgba(27, 53, 93, 0.2);
+        .swiper-scrollbar-drag {
+          background: #a67744;
+        }
+      }
+    }
+  }
+}

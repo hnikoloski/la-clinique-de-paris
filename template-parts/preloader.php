@@ -1,32 +1,25 @@
 <div id="preloader">
-    <!-- Google Chrome -->
-    <div class="infinityChrome">
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="wrap">
+        <div class="drop-outer">
+            <svg class="drop" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" />
+            </svg>
+        </div>
+        <div class="ripple ripple-1">
+            <svg class="ripple-svg" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="24" />
+            </svg>
+        </div>
+        <div class="ripple ripple-2">
+            <svg class="ripple-svg" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="24" />
+            </svg>
+        </div>
+        <div class="ripple ripple-3">
+            <svg class="ripple-svg" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="24" />
+            </svg>
+        </div>
     </div>
 
-    <!-- Safari and others -->
-    <div class="infinity">
-        <div>
-            <span></span>
-        </div>
-        <div>
-            <span></span>
-        </div>
-        <div>
-            <span></span>
-        </div>
-    </div>
-
-    <!-- Stuff -->
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
-        <defs>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-        </defs>
-    </svg>
 </div>

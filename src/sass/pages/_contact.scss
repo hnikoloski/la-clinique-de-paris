@@ -30,6 +30,7 @@
         line-height: 1;
         text-transform: uppercase;
         margin-top: 0.25em;
+        font-family: $ptSerif;
       }
     }
   }
@@ -202,7 +203,7 @@
               .contact-box {
                 height: 100%;
                 padding: 10%;
-                background: #263f65;
+                background: #16353a;
                 h2 {
                   margin: 0 0 1em 0;
                   font-size: 56.408rem;
@@ -245,7 +246,7 @@
                       transition: color 0.3s;
                       .material-icons {
                         margin-right: 0.5em;
-                        color: #546886;
+                        color: #fff;
                         transition: color 0.3s;
                       }
                       .text {

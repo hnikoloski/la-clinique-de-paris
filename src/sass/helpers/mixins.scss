@@ -40,6 +40,11 @@
   -webkit-transform: $t;
 }
 
+@mixin transform-origin($t) {
+  transform-origin: $t;
+  -moz-transform-origin: $t;
+  -webkit-transform-origin: $t;
+}
 @mixin scale($t) {
   -webkit-backface-visibility: hidden;
   -ms-transform: $t translateZ(0);

@@ -18,5 +18,9 @@ jQuery(document).ready(function ($) {
             $("#masthead").removeClass("sticky");
         }
     });
-
+    $('#menu-trigger').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('#masthead .main-navigation').toggleClass('active');
+    });
 });

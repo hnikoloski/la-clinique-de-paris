@@ -36,6 +36,11 @@
                 <a href="<?= home_url(); ?>" class="logo-wrapper d-block">
                     <img src="<?= $logoUrl[0]; ?>" alt="<?= get_bloginfo(); ?>">
                 </a>
+                <div id="menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <nav id="site-navigation-left" class="main-navigation">
                     <?php
                     wp_nav_menu(
